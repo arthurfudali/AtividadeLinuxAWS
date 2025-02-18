@@ -135,6 +135,8 @@ A terminal ira abrir o `nano` para editar o arquivo index.html:
 
 Aqui voce devera digitar ou colar o seu arquivo HTML que sera exibido
 
+[Pagina HTML]()
+
 ![image.png](attachment:36514391-5f3d-4a0b-ba61-b019b8829a30:image.png)
 
 Salve o arquivo com `CTRL + X`, `Y`, `Enter`
@@ -148,3 +150,65 @@ sudo systemctl restart nginx
 Agora, acesse a instancia pelo seu IP publico no navegador:
 
 `http://SEU_IP_PUBLICO`
+
+# Etapa 3: Monitoramento e notificações
+
+Para iniciar a criação do script, verifique se a versão do python e do pip (instalador de pacotes python) estão atualizadas, caso contrario, as atualize.
+
+```bash
+python3 --version
+pip3 --version
+```
+
+Agora ja sera possível instalar as bibliotecas necessárias para a execução do script:
+
+```bash
+pip install requests
+pip install logging
+```
+
+Caso nao for possível instalar utilizando o PIP, voce pode instalar as bibliotecas usando o APT:
+
+```bash
+sudo apt install python3-requests
+sudo apt install python3-logging
+```
+
+Agora, crie o script em um diretório de sua preferencia:
+
+```bash
+sudo nano /home/ubuntu/scripts/server_status.py
+```
+
+Em seguida, cole o script e salve as alterações com `CTRL + X, Y, ENTER`
+
+SCRIPT
+
+Adicione a permicao de EXECUCAO para o script:
+
+```bash
+sudo chmod +x server_status.py
+```
+
+Teste o script:
+
+```bash
+python3 server_status.py
+```
+
+Agora, crie a automação utilizando o serviço `crontab`:
+
+```bash
+crontab -e
+1
+
+#Em quando o arquivo de configs abrir com o nano, adicione a linha:
+* * * * * /usr/bin/python3 /home/ubuntu/scripts/server_status.py
+#Isso ira garantir que o script se excecute automaticamente a cada minuto
+```
+
+Em seguida, ative a execucao do servico `contrab` :
+
+```bash
+sudo systemctl enable cron
+```
