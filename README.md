@@ -135,7 +135,8 @@ A terminal ira abrir o `nano` para editar o arquivo index.html:
 
 Aqui voce devera digitar ou colar o seu arquivo HTML que sera exibido
 
-[Pagina HTML]()
+[Pagina HTML](index.html)
+[Folha de estilo](style.css)
 
 ![image.png](attachment:36514391-5f3d-4a0b-ba61-b019b8829a30:image.png)
 
@@ -182,7 +183,7 @@ sudo nano /home/ubuntu/scripts/server_status.py
 
 Em seguida, cole o script e salve as alterações com `CTRL + X, Y, ENTER`
 
-SCRIPT
+[Script de monitoramento](script.py)
 
 Adicione a permicao de EXECUCAO para o script:
 
