@@ -162,6 +162,7 @@ Agora, acesse a instância pelo IP público no navegador:
 
 ## Etapa 3: Monitoramento e notificações
 
+### Instalação de bibliotecas
 Para iniciar a criação do script, verifique se a versão do Python e do `pip` (gerenciador de pacotes do Python) está atualizada. Caso contrário, atualize-as.
 
 ```bash
@@ -183,6 +184,7 @@ sudo apt install python3-requests
 sudo apt install python3-logging
 ```
 
+### Criação do script
 Agora, crie o script em um diretório de sua preferência:
 
 ```bash
@@ -205,6 +207,8 @@ Teste o script:
 python3 server_status.py
 ```
 
+### Automação
+
 Agora, crie a automação utilizando o serviço `crontab`:
 
 ```bash
@@ -222,3 +226,6 @@ Em seguida, ative a execução do serviço `contrab` :
 ```bash
 sudo systemctl enable cron
 ```
+
+## Etapa 4: teste da implementacao
+
