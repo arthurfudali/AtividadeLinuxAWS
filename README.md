@@ -227,5 +227,25 @@ Em seguida, ative a execução do serviço `contrab` :
 sudo systemctl enable cron
 ```
 
-## Etapa 4: teste da implementacao
+## Etapa 4: teste da implementação
+
+
+Verifique se a página web está funcionando corretamente acessando:
+
+`http://SEU_IP_PUBLICO`
+
+No terminal da instância, verifique se o script está sendo executado a cada minuto:
+```bash
+crontab -e
+```
+
+Acesse o arquivo de log do script para verificar se as informações estão sendo registradas corretamente:
+```bash
+cat /var/log/server_status.log
+```
+Encerre o serviço do `nginx` e verifique se status foi notificado no discord:
+```bash
+sudo systemctl stop nginx
+```
+
 
