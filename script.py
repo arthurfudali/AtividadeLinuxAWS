@@ -35,12 +35,8 @@ def verificar_site():
 #FUNCAO PARA ENVIAR DISPONIBILIDADE DO SITE PARA O DISCORD
 def enviar_alerta():
 
-    #PEGA O CODIGO DE ERRO DO SITE
-    request = requests.get(SITE_URL, timeout=5)
-    status_code = request.status_code
-
     #O DISCORD ACEITA MENSAGEM EM FORMATO DE JSON:
-    mensagem = {"content": f"🚨O site está fora do ar! Erro: {status_code}"}
+    mensagem = {"content": f"🚨O site está fora do ar!"}
 
     #ENVIA A MENSAGEM PARA O DISCORD
     requests.post(DISCORD_WEBHOOK_URL, json=mensagem)
