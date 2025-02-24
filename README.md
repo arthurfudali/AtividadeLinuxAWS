@@ -1,7 +1,36 @@
 # AtividadeLinuxAWS
 Atividade utilizando uma Instancia EC2 Linux, VPCs, WebServer Nginx e monitoramento de indisponibilidade
 
+## Objetivos
+Desenvolver e testar habilidades em Linux, AWS e automação de processos ao criar um servidor web com Nginx com monitoramento de indisponibilidade.
+
+## Requisitos
+- Computador com acesso a internet Windows
+- Conta AWS
+- Instância EC2 Ubuntu
+- VPCs
+- Nginx
+
+
+## 0. Criação do Webhook no discord (prerequisito)
+
+### Em um servidor do discord:
+
+- Clique no icone de configurações do servidor
+- Clique em Integrações > Webhooks
+- Clique em Criar Webhook (ou modifique o Webhook existente)
+- Insira o nome do Webhook
+- Copie a URL do Webhook
+
+
+![alt text](image.png)
+
+![alt text](image-1.png)
+
+
 ## 1. Criação da VPC
+
+A criação da VPC é o primeiro passo para criar uma instância EC2, a VPC personalizada garante maior controle sobre a comunicação entre os seus recursos e o acesso a internet. Para criar uma VPC:
 
 Acesse o painel de VPC.
 
