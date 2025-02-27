@@ -130,14 +130,13 @@ Com a máquina conectada, o terminal ficará assim:
 
 No terminal da instância, faça as atualizações necessárias:
 ```bash
-sudo yum update -y
+apt-get update -y
 ```
 
 Agora, instale o `Nginx`:
 
 ```bash
-sudo amazon-linux-extras enable nginx1
-sudo yum install nginx -y
+apt-get install -y nginx
 ```
 
 Inicialize e habilite o `Nginx`:
@@ -195,6 +194,7 @@ Agora, acesse a instância pelo IP público no navegador:
 Para iniciar a criação do script, verifique se a versão do Python e do `pip` (gerenciador de pacotes do Python) está atualizada. Caso contrário, atualize-as.
 
 ```bash
+apt-get install -y python3-pip
 python3 --version
 pip3 --version
 ```
