@@ -23,9 +23,9 @@ Desenvolver e testar habilidades em Linux, AWS e automação de processos ao cri
 - Copie a URL do Webhook
 
 
-![alt text](image.png)
+![alt text](images/criacaoServidor.png)
 
-![alt text](image-1.png)
+![alt text](images/botDS.png)
 
 
 ## 1. Criação da VPC
