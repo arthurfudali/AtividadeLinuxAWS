@@ -10,7 +10,7 @@ logging.basicConfig(filename=LOG_FILE, level=logging.INFO, format="%(asctime)s -
 
 #URLS DO SITE A SER MONITORADO E DA WEBHOOK DO DISCORD
 SITE_URL = "http://localhost" 
-DISCORD_WEBHOOK_URL = "https://discord.com/api/webhooks/1339930323089100841/-89wQnbpzKxSGd86a9g12OFPHNq7PxV5x6YuBPrXrqCcoqHkqLOngp9xvd96NLpZLEEJ" #COLOQUE AQUI SUA URL
+DISCORD_WEBHOOK_URL = "" #COLOQUE AQUI SUA URL
 
 #FUNCAO QUE VERIFICA O STATUS DO SITE VIA CODIGOS HTTP
 def verificar_site():
